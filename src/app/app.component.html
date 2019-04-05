@@ -1,0 +1,123 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+
+<style type="text/css">
+.chess{
+    width: 322px;
+    height: 320px;
+    margin: 20px;
+    border: 1px solid #333;
+}
+.white{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    font-size:10px;
+    text-align:center;
+}
+.black{
+    width: 40px;
+    height: 40px;
+    background-color:black;
+    font-size:10px;
+    text-align:center;    
+}
+
+.blacktxt{
+  color:white;
+  text-align: center;
+
+}
+.whitetxt{
+  color: black;
+  text-align: center;
+}
+.column2{
+float:left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  
+  padding: 0px;
+  height: 320px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+
+ <div class="chess">
+
+<div class="row">
+    <div class="column" style="background-color:#bbb;">
+    <div  *ngFor="let chessa1 of chessa1s; index as i">
+        <div class="black"  *ngIf="i%2==0"><label class="blacktxt">{{chessa1}}</label></div>
+        <div class="white"  *ngIf="i%2!=0"><label class="whitetxt">{{chessa1}}</label></div>
+    </div>
+</div>
+
+  <div class="column" style="background-color:#bbb;">
+      <div  *ngFor="let chessb2 of chessb2s; index as i">
+          <div class="black"  *ngIf="i%2!==0"><label class="blacktxt">{{chessb2}}</label></div>
+          <div class="white"  *ngIf="i%2===0"><label class="whitetxt">{{chessb2}}</label></div>
+      </div>
+   </div>
+
+<div class="column" style="background-color:#ccc;">
+    <div  *ngFor="let chessc3 of chessc3s; index as i">
+        <div class="black"  *ngIf="i%2===0"><label class="blacktxt">{{chessc3}}</label></div>
+        <div class="white"  *ngIf="i%2!==0"><label class="whitetxt">{{chessc3}}</label></div>
+    </div>
+
+  </div>
+  <div class="column" style="background-color:#ddd;">
+
+      <div  *ngFor="let chessd4 of chessd4s; index as i">
+          <div class="black"  *ngIf="i%2!==0"><label class="blacktxt">{{chessd4}}</label></div>
+          <div class="white"  *ngIf="i%2===0"><label class="whitetxt">{{chessd4}}</label></div>
+      </div>
+
+  </div>
+  <div class="column" style="background-color:#ddd;">
+      <div  *ngFor="let chesse5 of chesse5s; index as i">
+          <div class="black"  *ngIf="i%2===0"><label class="blacktxt">{{chesse5}}</label></div>
+          <div class="white"  *ngIf="i%2!==0"><label class="whitetxt">{{chesse5}}</label></div>
+      </div>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+      <div  *ngFor="let chessf6 of chessf6s; index as i">
+          <div class="black"  *ngIf="i%2!==0"><label class="blacktxt">{{chessf6}}</label></div>
+          <div class="white"  *ngIf="i%2===0"><label class="whitetxt">{{chessf6}}</label></div>
+      </div>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+      <div  *ngFor="let chessg7 of chessg7s; index as i">
+          <div class="black"  *ngIf="i%2===0"><label class="blacktxt">{{chessg7}}</label></div>
+          <div class="white"  *ngIf="i%2!==0"><label class="whitetxt">{{chessg7}}</label></div>
+      </div>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+      <div  *ngFor="let chessh8 of chessh8s; index as i">
+          <div class="black"  *ngIf="i%2!==0"><label class="blacktxt">{{chessh8}}</label></div>
+          <div class="white"  *ngIf="i%2===0"><label class="whitetxt">{{chessh8}}</label></div>
+      </div>
+  </div>
+</div>
+</div>
+
